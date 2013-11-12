@@ -41,7 +41,7 @@ $(document).ready(function() {
   });
 
   function scaleSelect() {
-    if ($('.font_scale').val() == 'aug_fourth_dim_fifth') {
+    if ($('.font_scale').val() == 'augmented_fourth') {
       scaleRatio = 1.414;
       scaleCalc();
     };
@@ -93,6 +93,10 @@ $(document).ready(function() {
       scaleRatio = 1.778;
       scaleCalc();
     };
+    if ($('.font_scale').val() == 'perfect_octave') {
+      scaleRatio = 2;
+      scaleCalc();
+    };
     if ($('.font_scale').val() == 'perfect_sixth') {
       scaleRatio = 1.6;
       scaleCalc();
@@ -103,10 +107,6 @@ $(document).ready(function() {
     };
     if ($('.font_scale').val() == 'perfect_fifth') {
       scaleRatio = 1.5;
-      scaleCalc();
-    };
-    if ($('.font_scale').val() == 'perfect_octave') {
-      scaleRatio = 2;
       scaleCalc();
     };
   };
