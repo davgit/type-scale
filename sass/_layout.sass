@@ -1,0 +1,34 @@
+
+html
+  overflow-y: scroll // show scrollbar regardless of page height
+  height: 100%
+
+body
+  cursor: default
+
+.container
+  @include box-sizing(border-box)
+  padding: 2em
+  @media screen and (max-width: #{$app-media-xs})
+    padding: 1.2em
+
+.stage
+  @include box-sizing(border-box)
+  padding-bottom: 12em
+
+.stage_footer
+  position: absolute
+  bottom: 100%
+  left: 0
+  right: 0
+  padding: 2em
+  background-color: $app-gray-medium
+  @media screen and (max-width: #{$app-media-xs})
+    padding: 1.2em
+
+.content
+  position: relative
+  background-color: $app-gray-light
+
+.content_width
+  max-width: 35em

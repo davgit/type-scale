@@ -1,0 +1,118 @@
+
+.col_single, .main_col
+  max-width: 40em
+  > *:first-child
+    margin-top: 0
+
+// wrap each row of columns with .cols
+.cols
+  clear: both
+  &:after
+    visibility: hidden
+    display: block
+    font-size: 0
+    content: " "
+    clear: both
+    height: 0
+  > div
+    @include box-sizing(border-box)
+    @media screen and (min-width: #{$app-media-xs})
+      > *:first-child
+        margin-top: 0
+  &:not(.media_xs_cols)
+    @media screen and (max-width: #{$app-media-xs})
+      @include flexbox
+      @include flex-direction
+      > div
+        float: none !important
+        width: 100%
+        padding-left: 0 !important
+        padding-right: 0 !important
+
+// two equal columns
+.col_half
+  float: left
+  width: 50%
+  padding: 0 1.538em
+
+// 3 equal columns
+.col_one_third
+  float: left
+  width: 33.33%
+  padding: 0 1em
+
+// combine with .col_one_third
+.col_two_thirds
+  float: left
+  width: 66.67%
+  padding: 0 1em
+
+// 4 equal columns
+.col_one_fourth
+  float: left
+  width: 25%
+  padding: 0 1em
+
+// combine with .col_one_fourth x 2
+.col_two_fourths
+  float: left
+  width: 50%
+  padding: 0 2.077em
+
+// combine with .col_one_fourth
+.col_three_fourths
+  float: left
+  width: 75%
+  padding: 0 1em
+
+// fixes the first and last column for 3 and 4 columns
+.col_one_third, .col_one_fourth
+  &:first-of-type
+    clear: left
+    padding: 0 2.077em 0 0
+
+  &:last-of-type
+    clear: right
+    padding: 0 0 0 2.077em
+
+// fixes the first and last column for columns that will always be in the first or last position
+.col_half, .col_two_thirds, .col_two_fourths, .col_three_fourths
+  &:first-of-type
+    clear: left
+    padding-left: 0
+
+  &:last-of-type
+    clear: right
+    padding-right: 0
+
+@media screen and (max-width: #{$app-media-xs})
+  .media_xs_cols
+    @include column-count(2)
+    @include column-gap($app-margin-medium)
+
+@media screen and (min-width: #{$app-media-xs})
+  .cols_two_flow
+    @include column-count(2)
+    @include column-gap($app-margin-medium)
+
+  .cols_three_flow
+    @include column-count(3)
+    @include column-gap($app-margin-medium)
+
+  .cols_four_flow
+    @include column-count(4)
+    @include column-gap($app-margin-small)
+
+.col_side
+  float: left
+  width: 25%
+  padding-right: 2.077em
+  @media screen and (max-width: #{$app-media-small})
+    width: 36%
+
+.col_main
+  float: left
+  width: 75%
+  padding-left: 1em
+  @media screen and (max-width: #{$app-media-small})
+    width: 64%

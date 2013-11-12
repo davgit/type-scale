@@ -1,0 +1,70 @@
+
+body
+  font-family: $app-font
+  font-size: $app-base-em
+  font-weight: $app-font-weight
+  line-height: 1.45
+  color: $app-font-color
+
+a
+  color: $app-color-one
+  text-decoration: none
+  border-bottom: 1px solid $app-color-one
+  @include transition(all 0.3s ease 0s)
+  &:hover
+    color: $app-font-color
+    border-color: $app-font-color
+
+em, i, .font_italic
+  font-style: italic
+
+strong, b, .font_bold
+  font-weight: $app-font-bold
+
+p, blockquote, ul, ol
+  margin-bottom: $app-margin-small
+
+h1
+  display: inline
+
+h2
+  font-size:  2.25em
+  font-weight: $app-font-weight
+  line-height: 1.3
+  letter-spacing: -0.025em
+  margin: 1.3em 0 0.5em 0
+  @media screen and (max-width: #{$app-media-xs})
+    font-size: 1.75em
+
+h3
+  font-size: 1.5em
+  font-weight: $app-font-weight
+  margin: 1.3em 0 0.5em 0
+  @media screen and (max-width: #{$app-media-xs})
+    font-size: 1.25em
+
+small, .font_small
+  font-size: $app-font-small
+
+.font_medium
+  font-size: 1.188em //19px
+
+.font_large
+  font-size: 135%
+  line-height: 1.3
+
+.font_xl
+  font-size: 200%
+  line-height: 1.3
+
+.text_muted
+  color: $app-brown
+
+.text_light
+  color: lighten($app-brown,10%)
+
+.text_center
+  text-align: center
+
+.text_right
+  text-align: right

@@ -1,0 +1,163 @@
+
+.scale_webfont
+  font-family: "Libre Baskerville", serif
+  white-space: nowrap
+
+.scale_preview_text
+  @include transition(font-size 0.3s ease 0s)
+
+.scale_base_size
+  background-color: $app-gray-light
+
+img
+  max-width: 100%
+  height: auto
+
+.break_xs
+  margin-bottom: $app-margin-small/2
+
+.break_small
+  margin-bottom: $app-margin-small
+
+.break_medium, .break_med
+  margin-bottom: $app-margin-medium
+
+.break_large
+  margin-bottom: $app-margin-large
+
+.clear
+  clear: both
+
+.float_left
+  float: left
+  margin-right: $app-padding-small
+
+.float_right
+  float: right
+  margin-left: $app-padding-small
+
+.bleed
+  display: block
+  margin-left: -$app-padding-med
+  margin-right: -#{$app-padding-med*2}
+  @media screen and (max-width: 1280px)
+    margin-right: -$app-padding-med
+  @media screen and (max-width: 767px)
+    margin-left: -$app-padding-small
+    margin-right: -$app-padding-small
+
+ul, ol
+  margin-left: 1.2em
+ul
+  list-style: circle
+li
+  padding-left: 0.7em
+  margin-bottom: 0.7em
+
+.inline_list
+  list-style: none
+  display: inline-block
+  margin: 0
+  padding: 0
+  li
+    display: inline-block
+    border-right: 1px solid rgba(0,0,0,0.17)
+    margin: 0 0.6em 0 0
+    padding: 0 0.8em 0 0
+    &:last-of-type
+      border-right: none
+      margin-right: 0
+      padding-right: 0
+
+.box
+  @include box-sizing(border-box)
+  position: relative
+  margin-bottom: $app-margin-medium
+  padding: $app-padding-small
+  border: 1px solid $app-gray-medium
+  > *:first-child
+    margin-top: 0
+  > *:last-child
+    margin-bottom: 0
+
+.box_gray
+  @include box-sizing(border-box)
+  position: relative
+  margin-bottom: $app-margin-medium
+  padding: $app-padding-small
+  background-color: $app-gray-light
+  > *:first-child
+    margin-top: 0
+  > *:last-child
+    margin-bottom: 0
+
+hr
+  clear: both
+  border: none
+  border-bottom: 1px solid $app-gray-medium
+  height: 0
+  margin: $app-margin-medium 0
+  padding: 0
+
+.btn, input[type="submit"]
+  display: inline-block
+  border: 2px solid $app-color-one
+  padding: 0.45em 1.4em //0.35em 1.3em
+  color: #fff
+  background-color: $app-color-one
+  @include border-radius(4px)
+  font-size: $app-font-small
+  &:hover
+    background-color: transparent
+    border-color: #7AB9E9
+    color: darken($app-color-one, 7%)
+  +
+    .btn, input[type="submit"]
+      margin-left: 0.3em
+
+// keep these at the bottom
+
+@media screen and (max-width: #{$app-media-xs})
+  .media_xs_order_one
+    @include flex-order(0)
+
+  .media_xs_order_two
+    @include flex-order(1)
+
+  .media_xs_order_three
+    @include flex-order(2)
+
+  .media_xs_order_four
+    @include flex-order(3)
+
+  .media_xs_break_small
+    margin-bottom: $app-margin-small
+
+  .media_xs_break_medium
+    margin-bottom: $app-margin-medium
+
+  .media_xs_break_large
+    margin-bottom: $app-margin-large
+
+  .media_xs_bleed
+    display: block
+    margin-left: -1.2em
+    margin-right: -1.2em
+
+  .media_xs_hide
+    display: none
+
+  .media_xs_remove_box
+    border: none
+    padding: 0
+
+.remove_border_bottom
+  border-bottom: none
+
+.media_xs_show
+  display: none
+  @media screen and (max-width: #{$app-media-xs})
+    display: block
+
+.hidden, .hide
+  display: none

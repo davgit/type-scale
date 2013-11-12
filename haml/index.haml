@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+%html{lang: "en"}
+  %head
+    %meta{charset: "UTF-8"}
+    %meta{content: 'width=device-width', name: 'viewport'}
+    %title A Visual Type Scale Calculator
+
+    %link{href: "style.css", rel: "stylesheet", media: "all"}
+
+    %link{href: 'http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Libre+Baskerville:400', rel: 'stylesheet', type:'text/css'}
+
+    %link{href: "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css", rel: "stylesheet"}
+
+  %body
+    .container.stage
+      .cols
+        .col_side
+
+          %form
+            .box
+              .field
+                %label Base Size
+                %input.base_size.input_select_all{type: 'text', style: 'max-width:4em;'}
+                %span.text_muted
+                  px = <span class="base_em">1</span>em
+
+              .field
+                %label Scale
+                %select.font_scale
+                  %option{value: 'aug_fourth_dim_fifth'} 1.414 &mdash; Aug Fourth/Dim Fifth
+                  -#%option{value: 'double_octave'} 4.000 &mdash;Double Octave
+                  %option{value: 'golden_section'} 1.618 &mdash; Golden Section
+                  %option{value: 'major_second'} 1.125 &mdash; Major Second
+                  %option{value: 'major_third'} 1.250 &mdash; Major Third
+                  %option{value: 'major_sixth'} 1.667 &mdash; Major Sixth
+                  %option{value: 'major_seventh'} 1.875 &mdash; Major Seventh
+                  %option{value: 'major_tenth'} 2.500 &mdash; Major Tenth
+                  -#%option{value: 'major_eleventh'} 2.667 &mdash; Major Eleventh
+                  -#%option{value: 'major_twelfth'} 3.000 &mdash;Major Twelfth
+                  %option{value: 'minor_second'} 1.067 &mdash; Minor Second
+                  %option{value: 'minor_third'} 1.200 &mdash; Minor Third
+                  %option{value: 'minor_seventh'} 1.778 &mdash; Minor Seventh
+                  %option{value: 'perfect_sixth'} 1.600 &mdash; Perfect Sixth
+                  %option{value: 'perfect_fourth'} 1.333 &mdash; Perfect Fourth
+                  %option{value: 'perfect_fifth', selected: 'true'} 1.500 &mdash; Perfect Fifth
+                  %option{value: 'perfect_octave'} 2.000 &mdash; Perfect Octave
+
+              .field
+                %label Preview Text
+                %input.preview_text.input_select_all{type: 'text', value: 'A Visual Type Scale Calculator'}
+
+              .table_layout
+                .table_cell
+                  %h3 Google Webfont
+
+                .table_cell.text_right
+                  %a.font_small{href: 'http://www.google.com/fonts/', target: '_blank', tabindex: '-1'} Find Webfont
+
+              .field
+                %label Paste Tag
+                %input.web_font.input_select_all{type: 'text', value: "<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>"}
+
+              .field
+                %label Paste CSS
+                %input.web_font_name.input_select_all{type: 'text', value: "font-family: 'Libre Baskerville', serif;"}
+
+        .col_main{style: 'overflow:hidden;'}
+          .table_padded
+            .table_row
+              .table_cell.text_right.cell_collapse
+                %span.scale_high_label.text_muted.font_small
+              .table_cell.scale_webfont
+                %h1
+                  %span.scale_high.scale_preview_text A Visual Type Scale Calculator
+
+            .table_row
+              .table_cell.text_right.cell_collapse
+                %span.scale_high_label.text_muted.font_small
+              .table_cell.scale_webfont
+                %span.scale_high.scale_preview_text A Visual Type Scale Calculator
+
+            .table_row
+              .table_cell.text_right.cell_collapse
+                %span.scale_high_label.text_muted.font_small
+              .table_cell.scale_webfont
+                %span.scale_high.scale_preview_text A Visual Type Scale Calculator
+
+            .table_row
+              .table_cell.text_right.cell_collapse
+                %span.scale_high_label.text_muted.font_small
+              .table_cell.scale_webfont
+                %span.scale_high.scale_preview_text A Visual Type Scale Calculator
+
+            .table_row.scale_base_size
+              .table_cell.text_right.cell_collapse
+                %span.scale_high_label.text_muted.font_small
+              .table_cell.scale_webfont
+                %span.scale_high.scale_preview_text A Visual Type Scale Calculator
+
+            .table_row
+              .table_cell.text_right.cell_collapse
+                %span.scale_low_label.text_muted.font_small
+              .table_cell.scale_webfont
+                %span.scale_low.scale_preview_text A Visual Type Scale Calculator
+
+            .table_row
+              .table_cell.text_right.cell_collapse
+                %span.scale_low_label.text_muted.font_small
+              .table_cell.scale_webfont
+                %span.scale_low.scale_preview_text A Visual Type Scale Calculator
+
+            .table_row
+              .table_cell.text_right.cell_collapse
+                %span.scale_low_label.text_muted.font_small
+              .table_cell.scale_webfont
+                %span.scale_low.scale_preview_text A Visual Type Scale Calculator
+
+    .content.container
+      .cols.stage_footer
+        .col_side.text_right.media_xs_hide
+          %ul.inline_list
+            %li
+              %a.remove_border_bottom{href: 'https://twitter.com/jeremybchurch'}
+                %span.fa.fa-twitter.fa-lg
+            %li
+              %a.remove_border_bottom{href: 'https://www.google.com/+JeremyChurch'}
+                %span.fa.fa-google-plus-square.fa-lg
+            %li
+              %a.remove_border_bottom{href: ''}
+                %span.fa.fa-github-alt.fa-lg
+
+        .col_main
+          A type tool by
+          %ul.inline_list
+            %li
+              %a{href: 'http://j.eremy.net/'} Jeremy Church
+            -#%li
+              %a{href: 'https://twitter.com/jeremybchurch'} @jeremybchurch
+
+
+      .cols
+        .col_side.media_xs_hide &nbsp;
+
+        .col_main
+          .content_width.font_medium.break_large
+            <div class="addthis_toolbox addthis_default_style">
+            <a class="remove_border_bottom addthis_button_facebook_like" fb:like:layout="button_count"></a>
+            <a class="remove_border_bottom addthis_button_tweet"></a>
+            <a class="remove_border_bottom addthis_button_google_plusone" g:plusone:size="medium"></a>
+            <a class="remove_border_bottom addthis_counter addthis_pill_style"></a>
+            </div>
+            <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5282613a649877a9"></script>
+
+            %h2 How to Use
+
+            %p I like to enter the base font size of my body content. Then I select from the surrounding values for headers and small copy.
+
+            %p There are no rules. Just experiment and have fun. Try using the values for line-height, margins or whatever, and see what works.
+
+            %h2 Background
+
+            %p Most people are familiar with Tim Brown&rsquo;s <a href="http://modularscale.com/">Modular Scale</a> calculator. The site has raised awareness about type scale and helped improve typography on the web. It&rsquo;s also the inspiration for this project.
+
+            %p The <em>Modular Scale</em> site has been a great reference over the years, but sometimes it&rsquo;s difficult to choose the proper scale without a visual reference. I hope to bridge that gap with the <em>Type Scale Calculator</em>.
+
+            %h2 Updates
+
+            %p I&rsquo;d like to keep this project current and useful to the community. Please direct ideas and feedback to me on <a href="https://twitter.com/jeremybchurch">Twitter</a> or the <a href="http://j.eremy.net/contact">contact page</a> on my site.
+
+          .break_small
+            %ul.inline_list
+              %li
+                %a.remove_border_bottom{href: 'https://twitter.com/jeremybchurch'}
+                  %span.fa.fa-twitter.fa-lg
+              %li
+                %a.remove_border_bottom{href: 'https://www.google.com/+JeremyChurch'}
+                  %span.fa.fa-google-plus-square.fa-lg
+              %li
+                %a.remove_border_bottom{href: ''}
+                  %span.fa.fa-github-alt.fa-lg
+
+          %p.font_small
+            Created by <a href="http://j.eremy.net/">Jeremy Church</a>. Project available on <a href="">Github</a>.
+            %br
+            Code licensed under <a href="http://opensource.org/licenses/mit-license.html">MIT License</a>.
+
+    %script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"}
+
+    %script{src: "script.min.js"}
+
+    <!-- script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-409712-10', 'type-scale.com');
+    ga('send', 'pageview');
+    </script -->
