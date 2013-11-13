@@ -41,74 +41,8 @@ $(document).ready(function() {
   });
 
   function scaleSelect() {
-    if ($('.font_scale').val() == 'augmented_fourth') {
-      scaleRatio = 1.414;
-      scaleCalc();
-    };
-    // if ($('.font_scale').val() == 'double_octave') {
-    //   scaleRatio = 4;
-    //   scaleCalc();
-    // };
-    if ($('.font_scale').val() == 'golden_section') {
-      scaleRatio = 1.618;
-      scaleCalc();
-    };
-    if ($('.font_scale').val() == 'major_second') {
-      scaleRatio = 1.125;
-      scaleCalc();
-    };
-    if ($('.font_scale').val() == 'major_third') {
-      scaleRatio = 1.25;
-      scaleCalc();
-    };
-    if ($('.font_scale').val() == 'major_sixth') {
-      scaleRatio = 1.667;
-      scaleCalc();
-    };
-    if ($('.font_scale').val() == 'major_seventh') {
-      scaleRatio = 1.875;
-      scaleCalc();
-    };
-    if ($('.font_scale').val() == 'major_tenth') {
-      scaleRatio = 2.5;
-      scaleCalc();
-    };
-    // if ($('.font_scale').val() == 'major_eleventh') {
-    //   scaleRatio = 2.667;
-    //   scaleCalc();
-    // };
-    // if ($('.font_scale').val() == 'major_twelfth') {
-    //   scaleRatio = 3;
-    //   scaleCalc();
-    // };
-    if ($('.font_scale').val() == 'minor_second') {
-      scaleRatio = 1.067;
-      scaleCalc();
-    };
-    if ($('.font_scale').val() == 'minor_third') {
-      scaleRatio = 1.2;
-      scaleCalc();
-    };
-    if ($('.font_scale').val() == 'minor_seventh') {
-      scaleRatio = 1.778;
-      scaleCalc();
-    };
-    if ($('.font_scale').val() == 'perfect_octave') {
-      scaleRatio = 2;
-      scaleCalc();
-    };
-    if ($('.font_scale').val() == 'perfect_sixth') {
-      scaleRatio = 1.6;
-      scaleCalc();
-    };
-    if ($('.font_scale').val() == 'perfect_fourth') {
-      scaleRatio = 1.333;
-      scaleCalc();
-    };
-    if ($('.font_scale').val() == 'perfect_fifth') {
-      scaleRatio = 1.5;
-      scaleCalc();
-    };
+    scaleRatio = $('.font_scale').val();
+    scaleCalc();
   };
 
   function scaleCalc() {
