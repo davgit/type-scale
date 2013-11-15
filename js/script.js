@@ -16,7 +16,12 @@ $(document).ready(function() {
   });
 
   $('.base_size').bind("change paste keyup", function() {
-    baseSize = $(this).val() / 16;
+    if($.isNumeric($(this).val())){
+      baseSize = $(this).val() / 16;
+    }
+    else {
+      baseSize = 0;
+    };
     $('.base_em').text(Math.round(baseSize*1000)/1000);
     scaleSelect();
   });
