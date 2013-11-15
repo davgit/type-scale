@@ -6,8 +6,8 @@ $(document).ready(function() {
 
   // Set initial values
   //$('.base_size').val(16).select();
-  $('.base_size').val(16);
-  baseSize = 1;
+  $('.base_size').val(24);
+  baseSize = 1.5;
   scaleRatio = 1.5;
   scaleCalc();
 
