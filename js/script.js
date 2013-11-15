@@ -60,9 +60,9 @@ $(document).ready(function() {
     };
 
     function scaleHighLabel() {
-      a = baseSize;
+      a = 1;
       b = scaleRatio;
-      result = baseSize;
+      result = 1;
 
       $($('.scale_high_label').get().reverse()).each(function(index) {
         $(this).text(Math.round(result*1000)/1000 + 'em');
@@ -84,9 +84,9 @@ $(document).ready(function() {
     };
 
     function scaleLowLabel() {
-      a = baseSize;
+      a = 1;
       b = scaleRatio;
-      result = baseSize;
+      result = 1;
 
       $('.scale_low_label').each(function(index) {
         result = a/b;
